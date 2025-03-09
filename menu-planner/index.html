@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>週間献立プランナー</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>週間献立プランナー</h1>
+        <nav>
+            <button id="recipes-tab" class="active">レシピ一覧</button>
+            <button id="weekly-tab">週間メニュー</button>
+            <button id="favorites-tab">お気に入り</button>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- レシピ一覧セクション -->
+        <section id="recipes-section" class="active-section">
+            <div class="filter-controls">
+                <select id="category-filter">
+                    <option value="all">すべてのカテゴリー</option>
+                    <option value="主菜">主菜</option>
+                    <option value="副菜">副菜</option>
+                    <option value="汁物">汁物</option>
+                </select>
+                <button id="random-recipe">ランダム提案</button>
+            </div>
+            <div id="recipe-list" class="recipe-container">
+                <!-- ここにレシピが動的に追加されます -->
+            </div>
+        </section>
+        
+        <!-- 週間メニューセクション -->
+        <section id="weekly-section" class="section">
+            <button id="generate-menu">週間メニューを生成</button>
+            <button id="share-menu">メニューを共有</button>
+            <div id="weekly-menu">
+                <!-- ここに週間メニューが動的に追加されます -->
+            </div>
+        </section>
+        
+        <!-- お気に入りセクション -->
+        <section id="favorites-section" class="section">
+            <div id="favorites-list" class="recipe-container">
+                <!-- ここにお気に入りが動的に追加されます -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 週間献立プランナー</p>
+    </footer>
+    
+    <script src="data/recipes.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
